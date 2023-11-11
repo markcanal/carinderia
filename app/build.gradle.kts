@@ -57,7 +57,7 @@ android {
         }
     }
 
-    hilt{
+    hilt {
         enableAggregatingTask = true
     }
 }
@@ -92,6 +92,8 @@ dependencies {
     //Firebase
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
+    implementation(libs.firebase.remote.config)
+    implementation(libs.firebase.firestore)
 
 }
 

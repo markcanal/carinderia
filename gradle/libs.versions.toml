@@ -47,8 +47,11 @@ kotlinx-coroutine = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutine
 timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 
 #Firebase
-firebase-bom = {group ="com.google.firebase",name="firebase-bom",version.ref="firebase"}
-firebase-analytics = {module="com.google.firebase:firebase-analytics"}
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-remote-config = { module = "com.google.firebase:firebase-config" }
+firebase-database = { module = "com.google.firebase:firebase-database" }
+firebase-firestore = { module = "com.google.firebase:firebase-firestore" }
 
 [plugins]
 dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
