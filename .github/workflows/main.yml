@@ -1,0 +1,29 @@
+name: Android CI
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/main.yml
+      - '*/src/**'
+      - gradle/**
+      - '**.gradle'
+      - gradle.properties
+      - gradlew*
+jobs:
+ build:
+   runs-on: ubuntu-latest
+   steps:
+   - uses: actions/checkout@v2
+   - name: Set up JDK 17
+     uses: actions/setup-java@v2
+     with:
+       distribution: 'zulu'
+       java-version: 17
+       java-package: jdk
+   - name: Make gradlew executable
+     run: chmod +x ./gradlew
+   - name: Check Lint Error
+     run: ./gradlew lint --warning-mode all
+   - name: Build with Gradle    
+     run: ./gradlew build --warning-mode all
+  
