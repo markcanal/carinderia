@@ -1,18 +1,18 @@
 [versions]
 # Core
-ktx = "1.10.1"
+ktx = "1.12.0"
 runtime-ktx = "2.6.2"
 # Compose
-compose-activity = "1.7.2"
-compose-bom = "2022.10.00"
+compose-activity = "1.8.0"
+compose-bom = "2023.10.01"
 
-coroutine = "1.3.9"
+coroutine = "1.7.3"
 #Test
 j-unit = "4.13.2"
 androidx-test = "1.1.5"
 espresso = "3.5.1"
 
-hilt = "2.44"
+hilt = "2.48.1"
 timber = "5.0.1"
 
 [libraries]
