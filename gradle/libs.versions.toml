@@ -14,7 +14,7 @@ espresso = "3.5.1"
 
 hilt = "2.48.1"
 timber = "5.0.1"
-
+firebase = "32.5.0"
 [libraries]
 # Core
 android-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
@@ -45,6 +45,10 @@ dagger-hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", ver
 kotlinx-coroutine = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutine" }
 
 timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+
+#Firebase
+firebase-bom = {group ="com.google.firebase",name="firebase-bom",version.ref="firebase"}
+firebase-analytics = {module="com.google.firebase:firebase-analytics"}
 
 [plugins]
 dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
