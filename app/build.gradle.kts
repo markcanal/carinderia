@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.carinderia"
-        minSdk = 21
+        minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -94,6 +94,8 @@ dependencies {
     implementation(libs.firebase.analytics)
     implementation(libs.firebase.remote.config)
     implementation(libs.firebase.firestore)
+    implementation(libs.firebase.storage)
+    implementation(libs.firebase.appcheck.playintegrity)
 
 }
 

@@ -52,6 +52,8 @@ firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
 firebase-remote-config = { module = "com.google.firebase:firebase-config" }
 firebase-database = { module = "com.google.firebase:firebase-database" }
 firebase-firestore = { module = "com.google.firebase:firebase-firestore" }
+firebase-storage = { module = "com.google.firebase:firebase-storage" }
+firebase-appcheck-playintegrity = { module = "com.google.firebase:firebase-appcheck-playintegrity" }
 
 [plugins]
 dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
