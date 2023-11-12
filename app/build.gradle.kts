@@ -1,9 +1,12 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("com.google.dagger.hilt.android")
     id("com.google.gms.google-services")
-    id("kotlin-kapt")
+    kotlin("kapt")
+    kotlin("plugin.parcelize")
+    kotlin("plugin.serialization")
+    id("com.google.dagger.hilt.android")
+
 }
 
 android {
@@ -45,6 +48,7 @@ android {
 
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 
     composeOptions {
@@ -55,10 +59,6 @@ android {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
-    }
-
-    hilt {
-        enableAggregatingTask = true
     }
 }
 
@@ -72,7 +72,9 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
-
+    implementation(libs.androidx.datastore.preferences)
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.materialcomponents)
     // Test
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext)
@@ -96,7 +98,21 @@ dependencies {
     implementation(libs.firebase.firestore)
     implementation(libs.firebase.storage)
     implementation(libs.firebase.appcheck.playintegrity)
+    implementation(libs.firebase.appcheck.debug)
+    implementation(libs.firebase.auth)
 
+    // Google Play
+    implementation(libs.play.services.location)
+    implementation(libs.play.services.maps)
+    implementation(libs.google.play.app.update)
+    implementation(libs.google.play.feature.delivery)
+    implementation(libs.google.play.app.update.ktx)
+
+
+}
+
+hilt {
+    enableAggregatingTask = true
 }
 
 kapt {
