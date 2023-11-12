@@ -17,3 +17,5 @@ local.properties
 .idea/misc.xml
 .idea/vcs.xml
 private_key.pepk
+debug.keystore
+my-key.keystore
