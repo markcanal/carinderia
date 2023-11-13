@@ -3,6 +3,7 @@ package com.example.carinderia.core
 import android.app.Application
 import android.content.Context
 import com.google.firebase.Firebase
+import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.appcheck.appCheck
 import com.google.firebase.appcheck.playintegrity.PlayIntegrityAppCheckProviderFactory
 import com.google.firebase.initialize
@@ -13,6 +14,7 @@ class CarinderiaApp : Application() {
     override fun onCreate() {
         super.onCreate()
         initializeAppCheck(this)
+        initializeAnalytics(this)
     }
 
     private fun initializeAppCheck(context: Context) {
@@ -20,5 +22,9 @@ class CarinderiaApp : Application() {
         Firebase.appCheck.installAppCheckProviderFactory(
             PlayIntegrityAppCheckProviderFactory.getInstance(),
         )
+    }
+
+    private fun initializeAnalytics(context: Context) {
+        FirebaseAnalytics.getInstance(context)
     }
 }
