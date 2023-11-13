@@ -1,4 +1,4 @@
-package com.example.carinderia.data
+package com.example.carinderia.data.repository
 
 import android.net.ConnectivityManager
 import android.net.Network
